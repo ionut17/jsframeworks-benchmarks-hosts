@@ -1,0 +1,24 @@
+<table>
+  <thead>
+      <tr>
+          <th *ngFor="let col of arrCols; let i = index">Header {{ i+1 }}</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let row of arrRows; let r = index">
+          <td *ngFor="let col of arrCols; let i = index">
+              <ng-container *ngIf="i % 3 == 2">
+                  {{ row }} / {{ col }}
+              </ng-container>
+              <ng-container *ngIf="i % 3 == 0">
+                  <input type="text" [value]="r+1"/>
+              </ng-container>
+              <ng-container *ngIf="i % 3 == 1">
+                  <select [value]="r+1">
+                      <option *ngFor="let col of arrCols; let j = index" [value]="j">Option {{j+1}}</option>
+                  </select>
+              </ng-container>
+          </td>
+      </tr>
+  </tbody>
+</table>

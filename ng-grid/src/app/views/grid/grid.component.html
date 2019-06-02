@@ -1,0 +1,9 @@
+<div class="grid">
+  <h1>Grid: {{rows}} rows, {{columns}} columns</h1>
+  <button (click)="addRows(1000)">Add 1000 rows</button>
+  <button (click)="removeRows(1000)">Remove 1000 rows</button>
+  <button (click)="addRows(10000)">Add 10,000 rows</button>
+  <button (click)="removeRows(10000)">Remove 10,000 rows</button>
+  <button (click)="clearRows()">Clear rows</button>
+  <app-grid [rows]="rows" [columns]="columns"></app-grid>
+</div>

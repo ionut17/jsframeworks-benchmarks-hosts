@@ -1,0 +1,13 @@
+<div class="forms">
+  <h1>This is a forms page</h1>
+  <form class="forms-wrapper">
+    <ng-container *ngFor="let zero of count; let i = index">
+      <input type="text" [placeholder]="'Input '+(i+1)">
+      <select>
+        <option hidden [value]="">Placeholder</option>
+        <option *ngFor="let val of dropdownValues" [value]="val">{{val}}</option>
+      </select>
+    </ng-container>
+    <button type="submit">Submit</button>
+  </form>
+</div>

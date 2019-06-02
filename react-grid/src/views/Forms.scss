@@ -1,0 +1,19 @@
+@import 'styles/common';
+.forms-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    input, select {
+      width: 200px;
+      margin: 5px;
+    }
+
+    &:not(:first-child){
+      margin-top: 10px;
+    }
+
+    button{
+      margin-top: 10px;
+    }
+}
